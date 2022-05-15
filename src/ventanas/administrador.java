@@ -48,7 +48,7 @@ public class administrador extends javax.swing.JFrame {
         try {
             Connection cn = conexion.conectar();
             PreparedStatement pst = cn.prepareStatement(
-            "select nombre_usuario from usuario where username = '"+ user + "'");
+            "select nombreusuario from usuario where nombreusuario = '"+ user + "'");
             
             ResultSet rs = pst.executeQuery();
             if(rs.next()){
