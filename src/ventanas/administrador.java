@@ -31,10 +31,9 @@ public class administrador extends javax.swing.JFrame {
         user = login.user;
         sesion_usuario = 1;
         
+        setTitle("Administrador - Sesion de " +user);
         setSize(650,430);
         setResizable(false);
-        setTitle("Administrador - Sesion de"+user);
-        setTitle("Administrador");
         setLocationRelativeTo(null);
         
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -99,6 +98,11 @@ public class administrador extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1_registrarusuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/addUser.png"))); // NOI18N
+        jButton1_registrarusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1_registrarusuarioActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1_registrarusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 120, 100));
 
         jLabel1_nombreusuario.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -151,6 +155,12 @@ public class administrador extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1_registrarusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_registrarusuarioActionPerformed
+        
+           registrarusuarios registrarUsuarios = new registrarusuarios();
+           registrarUsuarios.setVisible(true);
+    }//GEN-LAST:event_jButton1_registrarusuarioActionPerformed
 
     /**
      * @param args the command line arguments

@@ -1,7 +1,11 @@
 package ventanas;
 
 import clases.conexion;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.sql.*;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.WindowConstants;
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -30,6 +34,18 @@ public class registrarusuarios extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        
+        ImageIcon wallpaper = new ImageIcon("src/image/wallpaperPrincipal.jpg");
+        Icon icono = new ImageIcon(wallpaper.getImage().getScaledInstance(jLabel_wallpaper.getWidth(),
+                jLabel_wallpaper.getHeight(), Image.SCALE_DEFAULT));
+        jLabel_wallpaper.setIcon(icono);
+        this.repaint(); 
+    }
+    
+    @Override
+    public Image getIconImage(){
+           Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("image/icon.png"));
+           return retValue; 
     }
 
     /**
@@ -56,9 +72,10 @@ public class registrarusuarios extends javax.swing.JFrame {
         cmb_niveles = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel8_footer = new javax.swing.JLabel();
-        jLabel1_wallpaper = new javax.swing.JLabel();
+        jLabel_wallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -139,7 +156,7 @@ public class registrarusuarios extends javax.swing.JFrame {
 
         jLabel8_footer.setText("Software creado por ");
         getContentPane().add(jLabel8_footer, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, -1, -1));
-        getContentPane().add(jLabel1_wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 350));
+        getContentPane().add(jLabel_wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -183,7 +200,6 @@ public class registrarusuarios extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmb_niveles;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel1_wallpaper;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -191,6 +207,7 @@ public class registrarusuarios extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8_footer;
+    private javax.swing.JLabel jLabel_wallpaper;
     private javax.swing.JTextField txt_mail;
     private javax.swing.JTextField txt_nombre;
     private javax.swing.JPasswordField txt_password;
