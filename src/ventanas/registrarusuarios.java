@@ -148,7 +148,12 @@ public class registrarusuarios extends javax.swing.JFrame {
         txt_password.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 210, -1));
 
-        cmb_niveles.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador\t", "Operador", " " }));
+        cmb_niveles.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador\t", "Usuario Sistema" }));
+        cmb_niveles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmb_nivelesActionPerformed(evt);
+            }
+        });
         getContentPane().add(cmb_niveles, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/add.png"))); // NOI18N
@@ -160,6 +165,10 @@ public class registrarusuarios extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cmb_nivelesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_nivelesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmb_nivelesActionPerformed
 
     /**
      * @param args the command line arguments

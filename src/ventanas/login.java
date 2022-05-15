@@ -123,11 +123,11 @@ public class login extends javax.swing.JFrame {
                     String tipousuario = rs.getString("tipousuario");
                     String status = rs.getString("status");
                     
-                    if(tipousuario.equalsIgnoreCase("administrador") && status.equalsIgnoreCase("activo")){
+                    if(tipousuario.equalsIgnoreCase("Administrador") && status.equalsIgnoreCase("activo")){
                         dispose();
                         new administrador().setVisible(true);
                     
-                    } else if(tipousuario.equalsIgnoreCase("usuariosistema") && status.equalsIgnoreCase("activo")){
+                    } else if(tipousuario.equalsIgnoreCase("Usuario Sistema") && status.equalsIgnoreCase("activo")){
                       dispose();
                       new usuariosistema().setVisible(true);
                       dispose();
