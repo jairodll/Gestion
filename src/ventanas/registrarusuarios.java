@@ -1,5 +1,8 @@
 package ventanas;
 
+import clases.conexion;
+import java.sql.*;
+import javax.swing.WindowConstants;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,11 +15,21 @@ package ventanas;
  */
 public class registrarusuarios extends javax.swing.JFrame {
 
+    String user; 
+    
     /**
      * Creates new form registrarusuarios
      */
     public registrarusuarios() {
         initComponents();
+        user = login.user;
+        
+        setTitle("Registrar nuevo usuario - Sesion de "+ user);
+        setSize(630,350);
+        setResizable(false);
+        setLocationRelativeTo(null);
+        
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -32,12 +45,8 @@ public class registrarusuarios extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txt_nombre = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txt_nombre1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        txt_nombre2 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        txt_nombre3 = new javax.swing.JTextField();
-        txt_nombre4 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txt_mail = new javax.swing.JTextField();
@@ -74,43 +83,15 @@ public class registrarusuarios extends javax.swing.JFrame {
         jLabel3.setText("Email:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
-        txt_nombre1.setBackground(new java.awt.Color(153, 153, 255));
-        txt_nombre1.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        txt_nombre1.setForeground(new java.awt.Color(255, 255, 255));
-        txt_nombre1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_nombre1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(txt_nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 210, -1));
-
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Telefono:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
-        txt_nombre2.setBackground(new java.awt.Color(153, 153, 255));
-        txt_nombre2.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        txt_nombre2.setForeground(new java.awt.Color(255, 255, 255));
-        txt_nombre2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_nombre2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(txt_nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 210, -1));
-
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Permisos:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
-
-        txt_nombre3.setBackground(new java.awt.Color(153, 153, 255));
-        txt_nombre3.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        txt_nombre3.setForeground(new java.awt.Color(255, 255, 255));
-        txt_nombre3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_nombre3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(txt_nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 210, -1));
-
-        txt_nombre4.setBackground(new java.awt.Color(153, 153, 255));
-        txt_nombre4.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
-        txt_nombre4.setForeground(new java.awt.Color(255, 255, 255));
-        txt_nombre4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_nombre4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(txt_nombre4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 210, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -212,10 +193,6 @@ public class registrarusuarios extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8_footer;
     private javax.swing.JTextField txt_mail;
     private javax.swing.JTextField txt_nombre;
-    private javax.swing.JTextField txt_nombre1;
-    private javax.swing.JTextField txt_nombre2;
-    private javax.swing.JTextField txt_nombre3;
-    private javax.swing.JTextField txt_nombre4;
     private javax.swing.JPasswordField txt_password;
     private javax.swing.JTextField txt_telefono;
     private javax.swing.JTextField txt_username;

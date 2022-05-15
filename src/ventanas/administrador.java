@@ -39,7 +39,7 @@ public class administrador extends javax.swing.JFrame {
         
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         
-        ImageIcon wallpaper = new ImageIcon("src/image/wallpaperPrincipalll.jpg");
+        ImageIcon wallpaper = new ImageIcon("src/image/wallpaperPrincipal.jpg");
         Icon icono = new ImageIcon(wallpaper.getImage().getScaledInstance(jLabel_Wallpaper.getWidth(),
                 jLabel_Wallpaper.getHeight(), Image.SCALE_DEFAULT));
         jLabel_Wallpaper.setIcon(icono);
